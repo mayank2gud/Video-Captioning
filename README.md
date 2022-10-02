@@ -124,6 +124,35 @@ probs =
 ![](util/sigmoid.png)
 
 
+
+## Correct descriptions
+
+| `TZ860P4iTaM_15_28.avi`,a cat is playing the piano           | `qvg9eM4Hmzk_4_10.avi`,a man is lifting a truck           |
+| ------------------------------------------------------------ | --------------------------------------------------------- |
+| ![](raw_videos/TZ860P4iTaM_15_28.gif)                        | ![raw](raw_videos/qvg9eM4Hmzk_4_10.gif)                   |
+| **`UXs3eq68ZjE_250_255.avi`,someone is is adding rice a pot** | **`0lh_UWF9ZP4_62_69.avi`,a woman is mixing ingredients** |
+| ![raw](raw_videos/UXs3eq68ZjE_250_255.gif)                   | ![raw](raw_videos/0lh_UWF9ZP4_62_69.gif)                  |
+
+## Relevant but incorrect descriptions
+
+
+
+| `778mkceE0UQ_40_46.avi`,a car is driving a a car | `PeUHy0A1GF0_114_121.avi`,a woman is the shrimp         |
+| ------------------------------------------------ | ------------------------------------------------------- |
+| ![raw](raw_videos/778mkceE0UQ_40_46.gif)         | ![raw](raw_videos/PeUHy0A1GF0_114_121.gif)              |
+| **`ufFT2BWh3BQ_0_8.avi`,a panda panda is**       | **`WTf5EgVY5uU_124_128.avi`,a woman is oil onions and** |
+| ![raw](raw_videos/ufFT2BWh3BQ_0_8.gif)           | ![raw](raw_videos/WTf5EgVY5uU_124_128.gif)              |
+
+## saver (Currently Unavailable)
+
+The model `save_net.ckpt-9407.data-00000-of-00001` is quite large (186MB), you are suggested to download the `.ckpt` separately. You can download this model from [here](#). 
+
+
+
+However, you can just directly reproduce this result by running `./run.sh`
+
+
+
 ## References
 
 **[1] S. Venugopalan, M. Rohrbach, R. Mooney, T. Darrell, and K. Saenko. Sequence to sequence video to text. In Proc. ICCV, 2015**
