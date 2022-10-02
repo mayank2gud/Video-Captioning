@@ -86,8 +86,6 @@ Epoch 99, step 95/96, (Training Loss: 2.0834, samp_prob: 0.1235) [4:07:06<00:00,
 
 
 
-![](util/bleu-cmd.png)
-
 ## How-to play
 
 1. Download the saver `.ckpt` file, and put it into `saver_best/`
@@ -95,13 +93,6 @@ Epoch 99, step 95/96, (Training Loss: 2.0834, samp_prob: 0.1235) [4:07:06<00:00,
 3. Set up the data path in `demo.sh`
 4. run `demo.sh`
 
-
-
-
-## To-do
-
-* "beam search" implementation
-* comparison of the Luong and Bahdanau Attention
 
 
 
@@ -131,69 +122,6 @@ probs =
 ```
 
 ![](util/sigmoid.png)
-
-
-
-## Correct descriptions
-
-| `TZ860P4iTaM_15_28.avi`,a cat is playing the piano           | `qvg9eM4Hmzk_4_10.avi`,a man is lifting a truck           |
-| ------------------------------------------------------------ | --------------------------------------------------------- |
-| ![](raw_videos/TZ860P4iTaM_15_28.gif)                        | ![raw](raw_videos/qvg9eM4Hmzk_4_10.gif)                   |
-| **`UXs3eq68ZjE_250_255.avi`,someone is is adding rice a pot** | **`0lh_UWF9ZP4_62_69.avi`,a woman is mixing ingredients** |
-| ![raw](raw_videos/UXs3eq68ZjE_250_255.gif)                   | ![raw](raw_videos/0lh_UWF9ZP4_62_69.gif)                  |
-
-## Relevant but incorrect descriptions
-
-
-
-| `778mkceE0UQ_40_46.avi`,a car is driving a a car | `PeUHy0A1GF0_114_121.avi`,a woman is the shrimp         |
-| ------------------------------------------------ | ------------------------------------------------------- |
-| ![raw](raw_videos/778mkceE0UQ_40_46.gif)         | ![raw](raw_videos/PeUHy0A1GF0_114_121.gif)              |
-| **`ufFT2BWh3BQ_0_8.avi`,a panda panda is**       | **`WTf5EgVY5uU_124_128.avi`,a woman is oil onions and** |
-| ![raw](raw_videos/ufFT2BWh3BQ_0_8.gif)           | ![raw](raw_videos/WTf5EgVY5uU_124_128.gif)              |
-
-## saver (Currently Unavailable)
-
-The model `save_net.ckpt-9407.data-00000-of-00001` is quite large (186MB), you are suggested to download the `.ckpt` separately. You can download this model from [here](#). 
-
-
-
-However, you can just directly reproduce this result by running `./run.sh`
-
-
-
-## Dataset Tree (Currently Unavailable)
-
-```shell
-.
-├── bleu_eval.py
-├── sample_output_testset.txt
-├── testing_data/
-│   ├── feat/ # 100 files, .npy
-│   ├── video/ #.avi
-│	└── id.txt
-├── testing_label.json
-├── training_data/
-│   ├── feat/ # 1450 files, .npy
-│   ├── video/ # .avi 
-│	└── id.txt
-└── training_label.json
-
-6 directories, 6 files
-```
-
-
-
-## Other branches: (Currently Unavailable)
-
-#### 1. Bidirectional RNN
-
-[https://github.com/AdrianHsu/MLDS2018SPRING/tree/241b127329e4dae85caaa0d294d81a1a1795cb5f](https://github.com/AdrianHsu/MLDS2018SPRING/tree/241b127329e4dae85caaa0d294d81a1a1795cb5f)
-
-#### 2. `raw_rnn()` combined with two `dynamic_rnn()`
-
-[https://github.com/AdrianHsu/MLDS2018SPRING/tree/66bde2627a0f36360dcffa5d76583ce49514ae8a](https://github.com/AdrianHsu/MLDS2018SPRING/tree/66bde2627a0f36360dcffa5d76583ce49514ae8a)
-
 
 
 ## References
